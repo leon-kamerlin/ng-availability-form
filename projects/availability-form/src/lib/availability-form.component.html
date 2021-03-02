@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+    <div class="pb-3">
+        <h3 class="text-muted">{{'availabilityFormHeadline' | translate}}</h3>
+    </div>
+    <app-availability-form-detail day="{{'monday' | translate}}" [form]="monday"></app-availability-form-detail>
+    <app-availability-form-detail day="{{'tuesday' | translate}}" [form]="tuesday"></app-availability-form-detail>
+    <app-availability-form-detail day="{{'wednesday' | translate}}" [form]="wednesday"></app-availability-form-detail>
+    <app-availability-form-detail day="thursday" [form]="thursday"></app-availability-form-detail>
+    <app-availability-form-detail day="{{'friday' | translate}}" [form]="friday"></app-availability-form-detail>
+    <app-availability-form-detail day="{{'saturday' | translate}}" [form]="saturday"></app-availability-form-detail>
+    <app-availability-form-detail day="{{'sunday' | translate}}" [form]="sunday"></app-availability-form-detail>
+
+    <div class="d-flex justify-content-end align-items-center">
+        <button
+            class="mx-3"
+            *ngIf="showPreviousButton"
+            mat-raised-button>
+            {{'previous' | translate}}
+        </button>
+        <button
+            mat-raised-button
+            color="primary"
+            *ngIf="showSubmitButton"
+            [disabled]="form.invalid"
+            (click)="onSubmit(form.value)">{{submitText}}</button>
+    </div>
+</form>

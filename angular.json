@@ -1,0 +1,171 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "availability-form": {
+      "projectType": "library",
+      "root": "projects/availability-form",
+      "sourceRoot": "projects/availability-form/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/availability-form/tsconfig.lib.json",
+            "project": "projects/availability-form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/availability-form/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/availability-form/src/test.ts",
+            "tsConfig": "projects/availability-form/tsconfig.spec.json",
+            "karmaConfig": "projects/availability-form/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/availability-form/tsconfig.lib.json",
+              "projects/availability-form/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "availability-form-example": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/availability-form-example",
+      "sourceRoot": "projects/availability-form-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/availability-form-example",
+            "index": "projects/availability-form-example/src/index.html",
+            "main": "projects/availability-form-example/src/main.ts",
+            "polyfills": "projects/availability-form-example/src/polyfills.ts",
+            "tsConfig": "projects/availability-form-example/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/availability-form-example/src/favicon.ico",
+              "projects/availability-form-example/src/assets"
+            ],
+            "styles": [
+              "projects/availability-form-example/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/availability-form-example/src/environments/environment.ts",
+                  "with": "projects/availability-form-example/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "availability-form-example:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "availability-form-example:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "availability-form-example:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/availability-form-example/src/test.ts",
+            "polyfills": "projects/availability-form-example/src/polyfills.ts",
+            "tsConfig": "projects/availability-form-example/tsconfig.spec.json",
+            "karmaConfig": "projects/availability-form-example/karma.conf.js",
+            "assets": [
+              "projects/availability-form-example/src/favicon.ico",
+              "projects/availability-form-example/src/assets"
+            ],
+            "styles": [
+              "projects/availability-form-example/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/availability-form-example/tsconfig.app.json",
+              "projects/availability-form-example/tsconfig.spec.json",
+              "projects/availability-form-example/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/availability-form-example/e2e/protractor.conf.js",
+            "devServerTarget": "availability-form-example:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "availability-form-example:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "20f85301-cd35-4b6e-92bc-0adada6156a9"
+  },
+  "defaultProject": "availability-form"
+}

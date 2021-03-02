@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between align-items-center" [ngClass]="{'mb-3': form.invalid}" [formGroup]="form">
+
+    <div>
+        <mat-checkbox class="mat-h3" formControlName="available">{{ day }}</mat-checkbox>
+    </div>
+
+
+    <div class="d-flex justify-content-between align-items-center">
+
+        <mat-form-field>
+            <mat-label>{{'start' | translate}} {{start | fieldRequired}}</mat-label>
+            <mat-select [errorStateMatcher]="errorStateMatcher" [formControl]="start"
+                        [disabled]="!form.value.available">
+                <mat-option *ngFor="let hour of range" [value]="hour.value">{{ hour.viewValue }}</mat-option>
+            </mat-select>
+            <mat-error>{{'startTimeIsBiggerThanEndTime' | translate}}</mat-error>
+        </mat-form-field>
+
+
+        <mat-label class="mat-h3 mx-1"> -</mat-label>
+
+
+        <mat-form-field>
+            <mat-label>{{'end' | translate}} {{end | fieldRequired}}</mat-label>
+            <mat-select [errorStateMatcher]="errorStateMatcher" [formControl]="end" [disabled]="!form.value.available">
+                <mat-option *ngFor="let hour of range" [value]="hour.value">{{ hour.viewValue }}</mat-option>
+            </mat-select>
+            <mat-error>{{'endTimeIsSmallerThanStartTime' | translate}}</mat-error>
+        </mat-form-field>
+    </div>
+</div>
