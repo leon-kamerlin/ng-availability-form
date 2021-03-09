@@ -1,5 +1,5 @@
 {
-  "name": "availability-form",
+  "name": "ng-availability-form",
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^11.2.3",
