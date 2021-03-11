@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { DataDispatcher, DispatcherActionTypes } from 'leon-angular-utils';
-import { WeekAvailability } from './week-availability';
-import { DayAvailability } from './day-availability';
 import { defaultAvailability, timeValidator } from './helper';
+import { DataDispatcher, DayAvailability, DispatcherActionTypes, WeekAvailability } from 'leon-angular-utils';
 
 @Component({
     selector: 'lib-availability-form',

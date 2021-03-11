@@ -1,8 +1,6 @@
 /*
  * Public API Surface of availability-form
  */
-export * from './lib/day-availability';
-export * from './lib/week-availability';
 export * from './lib/helper';
 export * from './lib/availability-form.service';
 export * from './lib/availability-form.component';
