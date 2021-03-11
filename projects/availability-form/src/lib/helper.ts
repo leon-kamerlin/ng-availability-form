@@ -1,6 +1,6 @@
 import { AbstractControl } from '@angular/forms';
-import { DayAvailability } from './day-availability';
-import { WeekAvailability } from './week-availability';
+import { DayAvailability } from 'leon-angular-utils';
+import { WeekAvailability } from 'leon-angular-utils';
 import { SelectorView } from 'leon-angular-utils';
 
 
