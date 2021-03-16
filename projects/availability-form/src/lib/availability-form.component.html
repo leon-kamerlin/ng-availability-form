@@ -5,14 +5,14 @@
     <lib-availability-form-detail day="{{'monday' | translate}}" [form]="monday"></lib-availability-form-detail>
     <lib-availability-form-detail day="{{'tuesday' | translate}}" [form]="tuesday"></lib-availability-form-detail>
     <lib-availability-form-detail day="{{'wednesday' | translate}}" [form]="wednesday"></lib-availability-form-detail>
-    <lib-availability-form-detail day="thursday" [form]="thursday"></lib-availability-form-detail>
+    <lib-availability-form-detail day="{{'thursday' | translate}}" [form]="thursday"></lib-availability-form-detail>
     <lib-availability-form-detail day="{{'friday' | translate}}" [form]="friday"></lib-availability-form-detail>
     <lib-availability-form-detail day="{{'saturday' | translate}}" [form]="saturday"></lib-availability-form-detail>
     <lib-availability-form-detail day="{{'sunday' | translate}}" [form]="sunday"></lib-availability-form-detail>
 
     <div class="d-flex justify-content-end align-items-center">
         <button
-            class="mx-3"
+            class="mx-2"
             *ngIf="showPreviousButton"
             mat-raised-button>
             {{'previous' | translate}}
@@ -22,6 +22,6 @@
             color="primary"
             *ngIf="showSubmitButton"
             [disabled]="form.invalid"
-            (click)="onSubmit(form.value)">{{submitText}}</button>
+            (click)="onSubmit(form.value)">{{submitText || 'submit' | translate}}</button>
     </div>
 </form>

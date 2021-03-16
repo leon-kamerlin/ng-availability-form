@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { defaultAvailability, timeValidator } from './helper';
-import { DataDispatcher, DayAvailability, DispatcherActionTypes, WeekAvailability } from 'leon-angular-utils';
+import { DataDispatcher, DayAvailability, DispatcherActionTypes, TranslationLoaderService, WeekAvailability } from 'leon-angular-utils';
+import { locale as eng } from './i18n/en';
+import { locale as cro } from './i18n/hr';
 
 @Component({
     selector: 'lib-availability-form',
@@ -12,7 +14,11 @@ import { DataDispatcher, DayAvailability, DispatcherActionTypes, WeekAvailabilit
 
 export class AvailabilityFormComponent implements OnInit, OnChanges {
 
-    constructor(private fb: FormBuilder) {
+    constructor(
+        private fb: FormBuilder,
+        private translationLoaderService: TranslationLoaderService
+    ) {
+        translationLoaderService.loadTranslations(eng, cro);
         this.form = this.createForm(defaultAvailability);
     }
 
@@ -48,7 +54,7 @@ export class AvailabilityFormComponent implements OnInit, OnChanges {
     form: FormGroup;
 
     @Input()
-    submitText = 'Submit';
+    submitText;
 
     @Input()
     showPreviousButton = true;
