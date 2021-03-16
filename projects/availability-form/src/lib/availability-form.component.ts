@@ -68,6 +68,9 @@ export class AvailabilityFormComponent implements OnInit, OnChanges {
     @Output()
     submitted: EventEmitter<DataDispatcher<WeekAvailability>> = new EventEmitter();
 
+    @Output()
+    previousButtonClicked: EventEmitter<void> = new EventEmitter<void>();
+
 
     private static updateDayAvailability(dayAvailability: DayAvailability, day: FormGroup) {
         const start: FormControl = day.get('start') as FormControl;
