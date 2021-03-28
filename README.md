@@ -1,27 +1,16 @@
-# AvailabilityFormWorkspace
+# Angular Availability Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
-## Development server
+The Angular team builds and maintains both common UI components and tools to help you build your
+own custom components. The team maintains several npm packages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+| Package                   | Description                                                                         | Docs             |
+| ------------------------- | ----------------------------------------------------------------------------------- | ---------------- |
+| `@angular/cdk`            | Library that helps you author custom UI components with common interaction patterns | [Docs][cdk-docs] |
+| `@angular/material`       | [Material Design][] UI components for Angular applications                          | [Docs][mat-docs] |
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting started
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+See our [Getting Started Guide][getting-started] if you're building your first project with Angular
+Material.

@@ -1,24 +1,16 @@
-# AvailabilityForm
+# Angular Availability Form
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
 
-## Code scaffolding
+The Angular team builds and maintains both common UI components and tools to help you build your
+own custom components. The team maintains several npm packages.
 
-Run `ng generate component component-name --project availability-form` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project availability-form`.
-> Note: Don't forget to add `--project availability-form` or else it will be added to the default project in your `angular.json` file. 
+| Package                   | Description                                                                         | Docs             |
+| ------------------------- | ----------------------------------------------------------------------------------- | ---------------- |
+| `@angular/cdk`            | Library that helps you author custom UI components with common interaction patterns | [Docs][cdk-docs] |
+| `@angular/material`       | [Material Design][] UI components for Angular applications                          | [Docs][mat-docs] |
 
-## Build
 
-Run `ng build availability-form` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting started
 
-## Publishing
-
-After building your library with `ng build availability-form`, go to the dist folder `cd dist/availability-form` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test availability-form` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+See our [Getting Started Guide][getting-started] if you're building your first project with Angular
+Material.

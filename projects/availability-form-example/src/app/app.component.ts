@@ -14,6 +14,6 @@ export class AppComponent {
         const browserLang: string = translate.getBrowserLang();
         const cacheLang = localStorage.getItem('lang');
         const lang = cacheLang || browserLang;
-        translate.use(lang.match(/en|hr/) ? lang : 'en');
+        translate.use(lang.match(/en|hr/) ? 'en' : 'en');
     }
 }
