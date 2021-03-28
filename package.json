@@ -9,9 +9,9 @@
         "build:pack": "ng build --prod && npm run pack",
         "publish:lib": "npm run build:pack && npm publish dist/availability-form/*.tgz",
         "pack": "cd dist/availability-form && npm pack",
-        "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
+        "test": "ng test --watch=false --browsers=ChromeHeadless",
         "test:watch": "ng test",
-        "test:lib": "ng test availability-form",
+        "test:lib": "ng test --watch=false --browsers=ChromeHeadless availability-form",
         "lint": "ng lint",
         "e2e": "ng e2e"
     },

@@ -32,7 +32,7 @@ jobs:
           cd ../../
           npm ci
 
-      - name: Runs test
+      - name: Runs tests
         run: |
           npm run test:lib
 
