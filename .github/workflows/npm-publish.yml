@@ -33,7 +33,7 @@ jobs:
           npm install --legacy-peer-deps
           cd ../../
           npm ci
-          npm run publish:ci
+          npm run publish:lib
           pwd
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

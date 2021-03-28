@@ -16,7 +16,7 @@ import { FieldRequiredModule } from 'leon-angular-utils';
 @NgModule({
     declarations: [
         AvailabilityFormComponent,
-        AvailabilityFormDetailComponent
+        AvailabilityFormDetailComponent,
     ],
     imports: [
         CommonModule,

@@ -9,25 +9,25 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { FullScreenWrapperModule } from 'ng-components-leon';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    TranslateModule.forRoot(),
-    BrowserModule,
-    AvailabilityFormModule,
-    BrowserAnimationsModule,
-    FullScreenWrapperModule
-  ],
-  providers: [
-    {
-      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-      useValue: {
-        appearance: 'outline'
-      }
-    },
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        TranslateModule.forRoot(),
+        BrowserModule,
+        AvailabilityFormModule,
+        BrowserAnimationsModule,
+        FullScreenWrapperModule
+    ],
+    providers: [
+        {
+            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+            useValue: {
+                appearance: 'outline'
+            }
+        },
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

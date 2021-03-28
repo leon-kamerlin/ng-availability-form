@@ -1,4 +1,5 @@
 <lib-full-screen-wrapper title="Availability">
-  <lib-availability-form></lib-availability-form>
+    <lib-availability-form #availabilityFormComponent [showPreviousButton]="false"></lib-availability-form>
+    <pre>{{availabilityFormComponent.form.value | json}}</pre>
 </lib-full-screen-wrapper>
 
