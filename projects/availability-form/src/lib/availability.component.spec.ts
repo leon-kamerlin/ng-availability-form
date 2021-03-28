@@ -31,8 +31,4 @@ describe('AvailabilityFormComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
-
-    it('fails', () => {
-        expect(2).toBeLessThan(2);
-    });
 });
