@@ -27,13 +27,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org/
-      - name: npm ci and npm run build:prod
+      - name: Installing dependencies
         run: |
           cd projects/availability-form
           npm install --legacy-peer-deps
           cd ../../
           npm ci
+      - name: Publishing library to npm
+        run: |
           npm run publish:lib
-          pwd
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
