@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [15.x]
-
+        node-version: [ 15.x ]
     steps:
       - uses: actions/checkout@v1
-
       - name: Cache node modules
         uses: actions/cache@v1
         with:
@@ -33,6 +31,11 @@ jobs:
           npm install --legacy-peer-deps
           cd ../../
           npm ci
+
+      - name: Runs test
+        run: |
+          npm run test:lib
+
       - name: Publishing library to npm
         run: |
           npm run publish:lib
